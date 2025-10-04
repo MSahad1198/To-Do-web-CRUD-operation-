@@ -2,6 +2,8 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
+
+    #add task
     path ('addTask/', views.addTask, name = 'addTask'),
     
     #mark done
@@ -12,4 +14,7 @@ urlpatterns = [
 
     #edit feature
     path ('edit/<int:pk>/', views.editTask, name = 'editTask'),
+
+    #delete feature
+    path ('delete<int:pk>/', views.deleteTask, name = 'deleteTask'),
 ]
